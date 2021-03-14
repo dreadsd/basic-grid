@@ -1,0 +1,11 @@
+{
+  "name": "basic-grid",
+  "version": "1.0.0",
+  "description": "Lightweight CSS grid framework",
+  "main": "css/base.css",
+  "dependencies": {
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}

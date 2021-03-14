@@ -1,0 +1,28 @@
+@use "sass:list";
+@use "root";
+
+[class*=col] {
+  height: 100%;
+  float: left;
+}
+
+@each $msr,$vls in root.$row-heights {
+  $mlt_by: list.nth($vls, 1);
+  @each $sz in list.nth($vls, 2) {
+    .row-#{$msr}-#{$sz} {
+      height: $mlt_by * $sz;
+    }
+  }
+}
+
+@each $br,$sz in root.$breakpoints {
+  @media screen and (min-width: $sz) {
+    @each $size in root.$grid-sizes {
+      @for $i from 1 through $size {
+        .grid-#{$size} .col-#{$br}-#{$i} {
+          width: 100% / $size * $i;
+        }
+      }
+    }
+  }
+}
