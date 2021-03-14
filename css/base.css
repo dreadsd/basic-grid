@@ -1,1 +1,32 @@
+body {
+  margin: 0 !important;
+}
 
+/*
+each grid has rows and columns
+if 4  - each column 25%
+if 8  - each column 12.5%
+if 12 - each column 8.333%
+if 16 - each column 6.25%
+*/
+.grid-4 .col {
+  width: 25%;
+  float: left;
+}
+
+.grid-8 .col {
+  width: 12.5%;
+  float: left;
+}
+
+.grid-12 .col {
+  width: 8.3333333333%;
+  float: left;
+}
+
+.grid-16 .col {
+  width: 6.25%;
+  float: left;
+}
+
+/*# sourceMappingURL=base.css.map */
