@@ -1,18 +1,35 @@
 @use "reset";
 
 $grid-sizes: 4, 8, 12, 16;
-
-/*
-each grid has rows and columns
-if 4  - each column 25%
-if 8  - each column 12.5%
-if 12 - each column 8.333%
-if 16 - each column 6.25%
-*/
+// vh, multiplied by 25vh
+$row-vh-nums: 1, 2, 3, 4;
+// %, multiplied by 25%
+$row-pr-nums: 1, 2, 3, 4;
+// rem, multiplied by 5rem
+$row-rm-nums: 1, 2, 3, 4, 5, 6;
 
 @each $size in $grid-sizes {
   .grid-#{$size} .col {
     width: (100%/$size);
+    height: 100%;
     float: left;
+  }
+}
+
+@each $num in $row-vh-nums {
+  .row-vh-#{$num} {
+    height: 25vh * $num;
+  }
+}
+
+@each $num in $row-rm-nums {
+  .row-rm-#{$num} {
+    height: 5vh * $num;
+  }
+}
+
+@each $num in $row-pr-nums {
+  .row-pr-#{$num} {
+    height: 25% * $num;
   }
 }
