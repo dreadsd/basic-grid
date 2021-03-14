@@ -17,10 +17,12 @@ $row-heights: (
 );
 
 @each $size in $grid-sizes {
-  .grid-#{$size} .col {
-    width: (100%/$size);
-    height: 100%;
-    float: left;
+  @for $i from 1 through $size {
+    .grid-#{$size} .col-#{$i} {
+      width: 100% / $size * $i;
+      height: 100%;
+      float: left;
+    }
   }
 }
 
