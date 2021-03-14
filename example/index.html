@@ -6,11 +6,267 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="colors.css">
     <title>basic-grid-test</title>
+<style>
+[class*="col"]:not([class*="none"]) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+</style>
   </head>
   <body>
+    <h1>grid</h1>
+    <h2>.grid-4</h2>
+    <div class="grid-4">
+      <div class="row-rm-2">
+        <div class="col-1 color1">1</div>
+        <div class="col-1 color2">2</div>
+        <div class="col-1 color3">3</div>
+        <div class="col-1 color1">4</div>
+      </div>
+    </div>
+    <h2>.grid-8</h2>
     <div class="grid-8">
+      <div class="row-rm-2">
+        <div class="col-1 color1">1</div>
+        <div class="col-1 color2">2</div>
+        <div class="col-1 color3">3</div>
+        <div class="col-1 color1">4</div>
+        <div class="col-1 color2">5</div>
+        <div class="col-1 color3">6</div>
+        <div class="col-1 color1">7</div>
+        <div class="col-1 color2">8</div>
+      </div>
+    </div>
+    <h2>.grid-12</h2>
+    <div class="grid-12">
+      <div class="row-rm-2">
+        <div class="col-1 color1">1</div>
+        <div class="col-1 color2">2</div>
+        <div class="col-1 color3">3</div>
+        <div class="col-1 color1">4</div>
+        <div class="col-1 color2">5</div>
+        <div class="col-1 color3">6</div>
+        <div class="col-1 color1">7</div>
+        <div class="col-1 color2">8</div>
+        <div class="col-1 color3">9</div>
+        <div class="col-1 color1">10</div>
+        <div class="col-1 color2">11</div>
+        <div class="col-1 color3">12</div>
+      </div>
+    </div>
+    <h2>.grid-16</h2>
+    <div class="grid-16">
+      <div class="row-rm-2">
+        <div class="col-1 color1">1</div>
+        <div class="col-1 color2">2</div>
+        <div class="col-1 color3">3</div>
+        <div class="col-1 color1">4</div>
+        <div class="col-1 color2">5</div>
+        <div class="col-1 color3">6</div>
+        <div class="col-1 color1">7</div>
+        <div class="col-1 color2">8</div>
+        <div class="col-1 color3">9</div>
+        <div class="col-1 color1">10</div>
+        <div class="col-1 color2">11</div>
+        <div class="col-1 color3">12</div>
+        <div class="col-1 color1">13</div>
+        <div class="col-1 color2">14</div>
+        <div class="col-1 color3">15</div>
+        <div class="col-1 color1">16</div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <h1>row</h1>
+    <h2>row-vh-1</h2>
+    <div class="grid-4">
+      <div class="row-vh-1">
+        <div class="col-4 color1">25vh</div>
+      </div>
+    </div>
+    <h2>row-vh-2</h2>
+    <div class="grid-4">
+      <div class="row-vh-2">
+        <div class="col-4 color2">50vh</div>
+      </div>
+    </div>
+    <h2>row-vh-3</h2>
+    <div class="grid-4">
+      <div class="row-vh-3">
+        <div class="col-4 color3">75vh</div>
+      </div>
+    </div>
+    <h2>row-vh-4</h2>
+    <div class="grid-4">
+      <div class="row-vh-4">
+        <div class="col-4 color1">100vh</div>
+      </div>
+    </div>
+    <h2>row-pr-1</h2>
+    <div class="grid-4" style="height: 210px">
+      height: 210px
+      <div class="row-pr-1">
+        <div class="col-4 color2">25%, 52.5px</div>
+      </div>
+    </div>
+    <h2>row-pr-2</h2>
+    <div class="grid-4" style="height: 210px">
+      height: 210px
+      <div class="row-pr-2">
+        <div class="col-4 color3">50%, 105px</div>
+      </div>
+    </div>
+    <h2>row-pr-3</h3>
+    <div class="grid-4" style="height: 210px">
+      height: 210px
+      <div class="row-pr-3">
+        <div class="col-4 color1">75%, 157.5px</div>
+      </div>
+    </div>
+    <h2>row-pr-4</h3>
+    <div class="grid-4" style="height: 210px">
+      height: 210px
+      <div class="row-pr-4">
+        <div class="row-pr-4">
+          <div class="col-4 color2">100%, 210px</div>
+        </div>
+      </div>
+    </div>
+    <h2>row-rm-1</h2>
+    <div class="grid-4">
+      <div class="row-rm-1">
+        <div class="col-4 color3">5rem</div>
+      </div>
+    </div>
+    <h2>row-rm-2</h2>
+    <div class="grid-4">
+      <div class="row-rm-2">
+        <div class="col-4 color1">10rem</div>
+      </div>
+    </div>
+    <h2>row-rm-3</h2>
+    <div class="grid-4">
+      <div class="row-rm-3">
+        <div class="col-4 color2">15rem</div>
+      </div>
+    </div>
+    <h2>row-rm-4</h2>
+    <div class="grid-4">
+      <div class="row-rm-4">
+        <div class="col-4 color3">20rem</div>
+      </div>
+    </div>
+    <h2>row-rm-5</h2>
+    <div class="grid-4">
+      <div class="row-rm-5">
+        <div class="col-4 color1">25rem</div>
+      </div>
+    </div>
+    <h2>row-rm-6</h2>
+    <div class="grid-4">
       <div class="row-rm-6">
-        <div class="col-8 col-sm-7 col-md-1 blue"></div>
+        <div class="col-4 color2">30rem</div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <h1>column</h1>
+    <h2>.col-1</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1 color1">1/4</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-1 color1">1/4</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1 color1">1/4</div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1 color1">1/4</div>
+      </div>
+    </div>
+    <h2>.col-2</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-2 color2">2/4</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-2 color2">2/4</div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-2 color2">2/4</div>
+      </div>
+    </div>
+    <h2>.col-3</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-3 color3">3/4</div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-1"></div>
+        <div class="col-3 color3">3/4</div>
+      </div>
+    </div>
+    <h2>.col-4</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-4 color1">4/4</div>
+      </div>
+    </div>
+    <h2>.col-none</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        none
+        <div class="col-none color2"></div>
+      </div>
+    </div>
+    <h2>wrap</h2>
+    <div class="grid-4">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-3 color2">.col-3</div>
+        <div class="col-2 color3">.col-2</div>
+        <div class="col-4 color1">.col-4</div>
+      </div>
+    </div>
+    <p>This is outside of the row, even outside of the grid</p>
+    <br style="clear: left">
+    <br>
+    <hr>
+    <h1>responsive design</h1>
+    <div class="grid-8">
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-2 col-sm-4 col-md-6 col-lg-8 color1">2, 4, 6, 8</div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-8 col-lg-2 col-md-4 col-sm-6 color2">8, 6, 4, 2</div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-6 col-sm-4 col-md-2"></div>
+        <div class="col-2 col-sm-4 col-md-6 color3">2, 4, 6, -</div>
+      </div>
+      <div class="row-rm-2" style="background: gray">
+        <div class="col-2 col-md-none color1">2, -, none, -</div>
       </div>
     </div>
   </body>
