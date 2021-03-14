@@ -1,0 +1,13 @@
+@forward "columns"
+
+@each $br,$sz in root.$breakpoints {
+  @media screen and (min-width: $sz) {
+    @each $size in root.$grid-sizes {
+      @for $i from 1 through $size {
+        .grid-#{$size} .col-#{$br}-#{$i} {
+          width: 100% / $size * $i;
+        }
+      }
+    }
+  }
+}
