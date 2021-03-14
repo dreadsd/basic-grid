@@ -2,35 +2,56 @@
 @use "reset";
 
 // Custom number of columns here
-
 $grid-sizes: 4, 8, 12, 16;
 
 // Custom row heights here
 // Syntax:
 //   prefix: (base, (factors...))
 //     -> .row-prefix-factor
-
 $row-heights: (
   "vh": (25vh,  (1 2 3 4)),
   "pr": (25%,   (1 2 3 4)),
   "rm": (5rem,  (1 2 3 4 5 6))
 );
 
+// Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+[class*=col] {
+  height: 100%;
+  float: left;
+}
+
 @each $size in $grid-sizes {
   @for $i from 1 through $size {
     .grid-#{$size} .col-#{$i} {
       width: 100% / $size * $i;
-      height: 100%;
-      float: left;
     }
   }
 }
 
-@each $msr, $vls in $row-heights {
+@each $msr,$vls in $row-heights {
   $mlt_by: list.nth($vls, 1);
   @each $sz in list.nth($vls, 2) {
     .row-#{$msr}-#{$sz} {
       height: $mlt_by * $sz;
+    }
+  }
+}
+
+@each $br,$sz in $breakpoints {
+  @media screen and (min-width: $sz) {
+    @each $size in $grid-sizes {
+      @for $i from 1 through $size {
+        .grid-#{$size} .col-#{$br}-#{$i} {
+          width: 100% / $size * $i;
+        }
+      }
     }
   }
 }
