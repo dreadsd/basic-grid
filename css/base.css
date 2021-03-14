@@ -42,30 +42,6 @@ body {
   height: 100vh;
 }
 
-.row-rm-1 {
-  height: 5vh;
-}
-
-.row-rm-2 {
-  height: 10vh;
-}
-
-.row-rm-3 {
-  height: 15vh;
-}
-
-.row-rm-4 {
-  height: 20vh;
-}
-
-.row-rm-5 {
-  height: 25vh;
-}
-
-.row-rm-6 {
-  height: 30vh;
-}
-
 .row-pr-1 {
   height: 25%;
 }
@@ -80,6 +56,30 @@ body {
 
 .row-pr-4 {
   height: 100%;
+}
+
+.row-rm-1 {
+  height: 5rem;
+}
+
+.row-rm-2 {
+  height: 10rem;
+}
+
+.row-rm-3 {
+  height: 15rem;
+}
+
+.row-rm-4 {
+  height: 20rem;
+}
+
+.row-rm-5 {
+  height: 25rem;
+}
+
+.row-rm-6 {
+  height: 30rem;
 }
 
 /*# sourceMappingURL=base.css.map */

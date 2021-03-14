@@ -1,12 +1,20 @@
+@use "sass:list";
 @use "reset";
 
+// Custom number of columns here
+
 $grid-sizes: 4, 8, 12, 16;
-// vh, multiplied by 25vh
-$row-vh-nums: 1, 2, 3, 4;
-// %, multiplied by 25%
-$row-pr-nums: 1, 2, 3, 4;
-// rem, multiplied by 5rem
-$row-rm-nums: 1, 2, 3, 4, 5, 6;
+
+// Custom row heights here
+// Syntax:
+//   prefix: (base, (factors...))
+//     -> .row-prefix-factor
+
+$row-heights: (
+  "vh": (25vh,  (1 2 3 4)),
+  "pr": (25%,   (1 2 3 4)),
+  "rm": (5rem,  (1 2 3 4 5 6))
+);
 
 @each $size in $grid-sizes {
   .grid-#{$size} .col {
@@ -16,20 +24,11 @@ $row-rm-nums: 1, 2, 3, 4, 5, 6;
   }
 }
 
-@each $num in $row-vh-nums {
-  .row-vh-#{$num} {
-    height: 25vh * $num;
-  }
-}
-
-@each $num in $row-rm-nums {
-  .row-rm-#{$num} {
-    height: 5vh * $num;
-  }
-}
-
-@each $num in $row-pr-nums {
-  .row-pr-#{$num} {
-    height: 25% * $num;
+@each $msr, $vls in $row-heights {
+  $mlt_by: list.nth($vls, 1);
+  @each $sz in list.nth($vls, 2) {
+    .row-#{$msr}-#{$sz} {
+      height: $mlt_by * $sz;
+    }
   }
 }
