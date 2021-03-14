@@ -2,7 +2,7 @@
 
 ***Bloated***
 
-Simple CSS grid framework with media queries support. [Here is a demonstration](https://dreadsd.github.io/simple-grid/)
+Simple CSS grid framework with media queries support. [Here is a demonstration](https://dreadsd.github.io/simple-grid/).
 
 ## Installation
 ```sh
