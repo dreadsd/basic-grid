@@ -21,7 +21,7 @@ Now you're able to use the following classes:
   .row-rm-[1|...|6] (rem units: 5 to 30, step 5)
   - Example: row-pr-3 is a row with 75% of the parent container height
   ┃
-  ┗━.col-[1|...|num of colums] (column span)
+  ┗━.col-[1|...|num of colums|none] (column span)
     - Example: col-5 is an element that spans 5 columns
 ```
 Define a custom height for the columns if you want to exclude the row class.

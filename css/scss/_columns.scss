@@ -1,9 +1,13 @@
 @use "sass:list";
 @use "root";
 
-[class*=col] {
+[class*="col"] {
   height: 100%;
   float: left;
+}
+
+.col-none, .col-none * {
+  display: none;
 }
 
 @each $msr,$vls in root.$row-heights {
@@ -20,9 +24,16 @@
     @each $size in root.$grid-sizes {
       @for $i from 1 through $size {
         .grid-#{$size} .col-#{$br}-#{$i} {
+          display: block;
           width: 100% / $size * $i;
         }
+        .grid-#{$size} .col-#{$br}-#{$i} * {
+          display: block;
+        }
       }
+    }
+    .col-#{$br}-none {
+      display: none;
     }
   }
 }
