@@ -26,6 +26,8 @@ Now you're able to use the following classes:
 ```
 Define a custom height for the columns if you want to exclude the row class.
 
+You can use the `.clearfix` class in the parent container.
+
 Media queries:
 `.col-<breakpoint>-[1|...]`
 |Breakpoint|  Size  |
