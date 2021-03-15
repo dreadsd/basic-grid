@@ -1,5 +1,14 @@
 @use "root";
 
+.clearfix {
+  clear: both;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
 @each $size in root.$grid-sizes {
   @for $i from 1 through $size {
     .grid-#{$size} {
