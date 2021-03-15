@@ -1,7 +1,7 @@
 @use "sass:list";
 @use "root";
 
-[class*="col"] {
+[class^="col-"] {
   height: 100%;
   float: left;
 }

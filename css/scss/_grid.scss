@@ -3,7 +3,7 @@
 @each $size in root.$grid-sizes {
   @for $i from 1 through $size {
     .grid-#{$size} {
-      > .col-#{$i}, > [class^="row"] > .col-#{$i} {
+      > .col-#{$i}, > [class^="row-"] > .col-#{$i} {
         width: 100% / $size * $i;
       }
     }
